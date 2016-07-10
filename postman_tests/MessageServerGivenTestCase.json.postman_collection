@@ -1,6 +1,6 @@
 {
 	"id": "0cea54b0-0e16-a697-7bf5-b05bc5093462",
-	"name": "OlarkHWServerGivenTestCase",
+	"name": "MessageServerGivenTestCase",
 	"description": "functional test using given test case",
 	"order": [
 		"2823dd9d-2a50-b61a-50e3-13ee22237183",
