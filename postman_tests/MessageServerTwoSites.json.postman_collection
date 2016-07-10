@@ -1,6 +1,6 @@
 {
 	"id": "48957bca-e3c0-e6a8-a306-f04c104e0732",
-	"name": "OlarkHWServerTwoSites",
+	"name": "MessageServerTwoSites",
 	"description": "functional test fro two test sites",
 	"order": [
 		"555f9228-8a57-93a2-f72b-946216bd4722",
