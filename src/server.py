@@ -14,7 +14,7 @@ our_sites = sites.Sites()
 messages = []
 
 
-class ErinHWHandler(BaseHTTPRequestHandler):
+class MessageHandler(BaseHTTPRequestHandler):
     def _set_headers(self):
         self.send_response(200)
         self.send_header('Content-type', 'application/json')
@@ -41,6 +41,6 @@ class ErinHWHandler(BaseHTTPRequestHandler):
                 self.wfile.write(stats_file.read())
 
 if __name__ == '__main__':
-    server = HTTPServer(("", 80), ErinHWHandler)
-    print 'Starting ErinServer, use <Ctrl-C> to stop'
+    server = HTTPServer(("", 80), MessageHandler)
+    print 'Starting MessageServer, use <Ctrl-C> to stop'
     server.serve_forever()
