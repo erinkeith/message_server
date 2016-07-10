@@ -1,0 +1,426 @@
+{
+	"id": "0cea54b0-0e16-a697-7bf5-b05bc5093462",
+	"name": "OlarkHWServerGivenTestCase",
+	"description": "functional test using given test case",
+	"order": [
+		"2823dd9d-2a50-b61a-50e3-13ee22237183",
+		"a84ddac3-bcbb-41f5-2b51-9cbe5d10add8",
+		"1159582f-3adc-c000-a0aa-17835800b8e9",
+		"d68bff31-c746-0919-1961-7c669da32084",
+		"42efc986-f3c5-3d82-f3bf-064fca199617",
+		"7892524b-05a5-8028-d1b0-e304da61be69",
+		"90b70569-2404-cb20-f323-9848f22d36b0",
+		"154f08e3-c27a-652b-8e98-115a3fd9b9ad"
+	],
+	"folders": [],
+	"timestamp": 1462644035518,
+	"owner": "570084",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "1159582f-3adc-c000-a0aa-17835800b8e9",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "{{URL}}/events",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "id",
+					"value": "c",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "from",
+					"value": "visitor1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "type",
+					"value": "message",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "site_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "data_message",
+					"value": "hello",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "timestamp",
+					"value": "3",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1462743459331,
+			"name": "/events message2",
+			"description": "",
+			"collectionId": "0cea54b0-0e16-a697-7bf5-b05bc5093462",
+			"responses": []
+		},
+		{
+			"id": "154f08e3-c27a-652b-8e98-115a3fd9b9ad",
+			"headers": "",
+			"url": "{{URL}}/stats.json",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar jsonData = JSON.parse(responseBody);\ntests[\"Number of messages\"] = jsonData[0].messages === 2;\ntests[\"Number of visitors\"] = jsonData[0].visitors === 2;\ntests[\"Number of operators\"] = jsonData[0].operators === 1;\ntests[\"Number of emails\"] = jsonData[0].emails === 2;\ntests[\"Site_id\"] = jsonData[0].site_id === 1;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1462656453449,
+			"name": "/stats.json",
+			"description": "",
+			"collectionId": "0cea54b0-0e16-a697-7bf5-b05bc5093462",
+			"responses": []
+		},
+		{
+			"id": "2823dd9d-2a50-b61a-50e3-13ee22237183",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "{{URL}}/events",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "id",
+					"value": "a",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "from",
+					"value": "visitor1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "type",
+					"value": "message",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "site_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "data_message",
+					"value": "hello",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "timestamp",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1462743612014,
+			"name": "/events message1",
+			"description": "",
+			"collectionId": "0cea54b0-0e16-a697-7bf5-b05bc5093462",
+			"responses": []
+		},
+		{
+			"id": "42efc986-f3c5-3d82-f3bf-064fca199617",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "{{URL}}/events",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "id",
+					"value": "e",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "from",
+					"value": "visitor2",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "type",
+					"value": "message",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "site_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "data_message",
+					"value": "hello",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "timestamp",
+					"value": "5",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1462743476248,
+			"name": "/events message3",
+			"description": "",
+			"collectionId": "0cea54b0-0e16-a697-7bf5-b05bc5093462",
+			"responses": []
+		},
+		{
+			"id": "7892524b-05a5-8028-d1b0-e304da61be69",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "{{URL}}/events",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "id",
+					"value": "f",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "from",
+					"value": "operator1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "type",
+					"value": "status",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "site_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "data_status",
+					"value": "online",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "timestamp",
+					"value": "6",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1462743505947,
+			"name": "/events status3",
+			"description": "",
+			"collectionId": "0cea54b0-0e16-a697-7bf5-b05bc5093462",
+			"responses": []
+		},
+		{
+			"id": "90b70569-2404-cb20-f323-9848f22d36b0",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "{{URL}}/events",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "id",
+					"value": "g",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "from",
+					"value": "visitor2",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "type",
+					"value": "message",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "site_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "data_message",
+					"value": "hello",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "timestamp",
+					"value": "7",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1462743542396,
+			"name": "/events message4",
+			"description": "",
+			"collectionId": "0cea54b0-0e16-a697-7bf5-b05bc5093462",
+			"responses": []
+		},
+		{
+			"id": "a84ddac3-bcbb-41f5-2b51-9cbe5d10add8",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "{{URL}}/events",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "id",
+					"value": "b",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "from",
+					"value": "operator1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "type",
+					"value": "status",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "site_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "data_status",
+					"value": "online",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "timestamp",
+					"value": "2",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1462743331779,
+			"name": "/events status1",
+			"description": "",
+			"collectionId": "0cea54b0-0e16-a697-7bf5-b05bc5093462",
+			"responses": []
+		},
+		{
+			"id": "d68bff31-c746-0919-1961-7c669da32084",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "{{URL}}/events",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "id",
+					"value": "d",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "from",
+					"value": "operator1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "type",
+					"value": "status",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "site_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "data_status",
+					"value": "offline",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "timestamp",
+					"value": "4",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1462743451421,
+			"name": "/events status2",
+			"description": "",
+			"collectionId": "0cea54b0-0e16-a697-7bf5-b05bc5093462",
+			"responses": []
+		}
+	]
+}
